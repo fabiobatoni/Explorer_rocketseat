@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #23053A;
+  --fc-color: #4A4E69;
+  --hc-color: #8E9AAF;
+  --hc-color-secondary: #CBC0D3;
+  --bord-color: #FEEAFA;
+  --bd-color: #EFF1FF;
+  --primary: #FFFF;
+
+  font-size: 62.5%;
+}
+
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Staatliches', sans-serif;
+  background: var(--bd-color);
+
+  display: flex;
+}
+
+header {
+  text-align: center;
+  
+  background: var(--hc-color);
+  
+  height: 99rem;
+
+  width: 70rem;
+}
+
+header h1 {
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05rem;
+  height: 4.9rem;
+
+  font-weight: normal;
+
+  color: var(--primary);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  background-color: var(--hc-color-secondary);
+  padding: 0.7rem 8.6rem;
+
+  margin-top: 40px;
+
+  margin-bottom: 10rem;
+}
+
+header p {
+  font-family: 'Palanquin', sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-weight: 400;
+
+  margin: 0 auto;
+
+  max-width: 30rem;
+
+  color: var(--primary);
+
+}
+
+header img {
+  margin-top: 3.2rem;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+
+
+body {
+  background-color: var(--bd-color);
+  font-family: 'Staatliches';
+}
+
+.card img {
+  object-fit: cover;
+  width: 32rem;
+
+  border-radius: 2rem;
+
+  transition: all 0.3s;
+  transition-timing-function: ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  filter: blur(2.3px);
+  opacity: 0.6;
+  border-radius: 2.5rem;
+}
+
+.card:nth-child(1) img {
+  height: 45rem;
+}
+
+.card:nth-child(2) img {
+  height: 25rem;
+}
+
+.card:nth-child(3) img {
+  height: 25rem;
+}
+
+.card:nth-child(4) img {
+  height: 45rem;
+}
+
+.card:nth-child(5) img {
+  height: 45rem;
+}
+
+.card:nth-child(6) img {
+  height: 25rem;
+}
+
+.github img {
+  transition: 0.2s ease;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 10));
+}
+
+.github img:hover {
+  transform: scale(1.3);
+}
+
+.github {
+  display: inline-flex;
+  gap: 2rem;
+
+  margin: 3rem auto 4rem;
+}
+
+.github img {
+  height: 22px;
+}
+
+.github img {
+  height: 22px;
+}
+
+.github a {
+  font-family: 'Staatliches';
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: hsl(216, 79%, 16%);
+  transition: 0.25s;
+}
+
+@media (min-width: 900px) {
+  
+  body::before {
+      content: '';
+
+      background-color: var(--primary);
+      height: 100%;
+      width: 32rem;
+  
+      top:0;
+      left: 0;
+  
+      position: absolute;
+      z-index: -1;
+  }
+
+  body::before, .intro, footer {
+      animation: leftright 0.5s ease;
+  }
+
+  body {
+
+      font-family: 'Staatliches', sans-serif;
+      display: flex;
+      max-height: 100vh;
+
+      align-items: center;
+      justify-content: center;
+
+      margin-right: 70rem;
+  }
+
+  .gallery {
+      display: grid;
+
+      gap: 3.2rem;
+
+      grid-template-areas: 
+      "A C E"
+      "A D E"
+      "B D F";
+
+      animation: topdown reverse 0.5s ease;
+  }
+  
+  .gallery div:nth-child(1) {
+      grid-area: A;
+  }
+  
+  .gallery div:nth-child(2) {
+      grid-area: B;
+  }
+
+  .gallery div:nth-child(3) {
+      grid-area: C;
+  }
+  
+  .gallery div:nth-child(4) {
+      grid-area: D;
+  }
+
+  .gallery div:nth-child(5) {
+      grid-area: E;
+  }
+
+  .gallery div:nth-child(6) {
+      grid-area: F;
+  }
+
+  .logo {
+      margin-top: 20vh;
+  }
+
+  footer {
+      position: absolute;
+      left: 25rem;
+      bottom: 10rem;
+  }
+}
+
+
+@keyframes topdown {
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes downtop {
+  100% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+}
+
+
+
